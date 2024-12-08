@@ -50,14 +50,24 @@ button {
   position: fixed;
   inset: 0;
   background: #000;
-  opacity: 10%;
+  opacity: 0%;
 }
 
 .popup-modal.show {
   opacity: 100%;
   pointer-events: all;
+  animation: slide-down 0.3s ease-out;
 }
 
 .backdrop.show {
   opacity: 30%;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translate(-50%, -100%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
 }
